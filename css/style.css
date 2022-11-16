@@ -1,0 +1,142 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat';
+    background: linear-gradient(to right, rgb(19, 45, 80), rgb(57, 148, 92), rgb(0, 247, 255)), no-repeat;
+    color: #fff;
+}
+
+.container {
+
+    width: 95%;
+    margin: auto;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 25px 0;
+}
+
+.nav h2 {
+    font-size: 2rem;
+}
+
+.form_input {
+
+    width: 350px;
+    text-align: center;
+}
+
+.form_input input {
+    width: 80%;
+    outline: none;
+    padding: 8px;
+    border: 1px solid lightblue;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    -webkit-transition: all 0.20s ease-in-out;
+    -moz-transition: all 0.20s ease-in-out;
+    -ms-transition: all 0.20s ease-in-out;
+    -o-transtion: all 0.20s ease-in-out;
+    transition: all 0.20s ease-in-out;
+}
+
+.form_input input:focus {
+    box-shadow: 0 0 5px rgb(34, 179, 34);
+    border: 1px solid rgb(34, 179, 34);
+}
+
+.form_input button {
+    cursor: pointer;
+    padding: 8px;
+    width: fit-content;
+    transition: 1s;
+    outline: none;
+    background-color: lightblue;
+    border: 1px solid lightblue;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.form_input button:hover {
+    background-color: transparent;
+    color: white;
+
+}
+
+.to_do_items {
+    width: 500px;
+    margin: auto;
+
+}
+
+.item {
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: auto;
+    border-radius: 2px;
+    padding: 16px;
+    color: #454545;
+    margin-top: 10px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    -webkit-transition: all 0.20s ease-in-out;
+    -moz-transition: all 0.20s ease-in-out;
+    -ms-transition: all 0.20s ease-in-out;
+    -o-transtion: all 0.20s ease-in-out;
+    transition: all 0.20s ease-in-out;
+}
+
+.item:hover {
+    box-shadow: 0 0 20px rgb(21, 255, 60);
+    border: 1px solid rgb(21, 255, 60);
+}
+
+.item i {
+    cursor: pointer;
+    margin: 0 5px;
+
+}
+
+@media(max-width: 768px) {
+    .nav {
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .nav h2 {
+        margin: 10px 0;
+    }
+
+    .form_input {
+        width: 100%;
+
+    }
+
+    .to_do_items {
+        width: 100%;
+    }
+}
+
+@media(max-width: 480px) {
+    .form_input input {
+        width: 74%;
+    }
+}
+
+@media(max-width: 320px) {
+    .form_input input {
+        width: 60%;
+    }
+}
