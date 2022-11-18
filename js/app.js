@@ -12,6 +12,7 @@ function addItem(){
     let divChild = document.createElement('div');
     let checkIcon = document.createElement('i');
     let trashIcon = document.createElement('i');
+    let writeIcon = document.createElement('i');
 
     divParent.className = 'item';
     divParent.innerHTML = '<div>'+input.value+'</div>';
@@ -22,6 +23,12 @@ function addItem(){
         checkIcon.style.color = 'limegreen'; 
     })
 
+    writeIcon.className = "fa-sharp fa-solid fa-pen";
+    writeIcon.style.color = 'lightwhite';
+    writeIcon.addEventListener('click', function(){
+        writeIcon.style.color = 'limegreen';
+    } )
+
     divChild.appendChild(checkIcon);
 
     trashIcon.className = 'fas fa-trash';
@@ -29,6 +36,8 @@ function addItem(){
     trashIcon.addEventListener('click', function(){
         divParent.remove();
     })
+
+    divChild.appendChild(writeIcon);
 
     divChild.appendChild(trashIcon);
 
@@ -38,3 +47,16 @@ function addItem(){
 
     input.value = '';
 }
+
+const hamburger = document.querySelector('.hamburger');
+const navMenu = document.querySelector('.nav_menu');
+
+hamburger.addEventListener('click', ()=> {
+    hamburger.classList.toggle('active');
+    navMenu.classList.toggle('active');
+})
+
+document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', ()=> {
+    hamburger.classList.remove('active');
+    navMenu.classList.remove('active');
+}))
